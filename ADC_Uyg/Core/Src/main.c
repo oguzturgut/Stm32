@@ -1,4 +1,4 @@
-/* USER CODE BEGIN Header */
+﻿/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file           : main.c
@@ -75,7 +75,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
 		adc_value[1] = buffer[1];
 		adc_value[2] = buffer[2];
 
-		inp_val = (adc_value[0]/4095)*3.3 ;
+		inp_val = (adc_value[0]/4095)*3.3*3 ;
 
 		cur_val = (adc_value[1]/4095)*3.3;
 
@@ -133,6 +133,7 @@ int main(void)
 	  HAL_UART_Transmit(&huart2,str,20,1000);
 	  HAL_UART_Transmit(&huart2,str2,20,1000);
 	  HAL_UART_Transmit(&huart2,str3,20,1000);
+	  HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
