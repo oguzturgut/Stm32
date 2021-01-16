@@ -127,9 +127,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  sprintf(str,"ADC0:%.2f",inp_val);
-	  sprintf(str2,"ADC1:%.2f",cur_val);
-	  sprintf(str3,"Temp:%1f",temp);
+	  sprintf(str,"ADC0:%.2f\r\n",inp_val);
+	  sprintf(str2,"ADC1:%.2f\r\n",cur_val);
+	  sprintf(str3,"Temp:%1f\r\n",temp);
 	  HAL_UART_Transmit(&huart2,str,20,1000);
 	  HAL_UART_Transmit(&huart2,str2,20,1000);
 	  HAL_UART_Transmit(&huart2,str3,20,1000);
